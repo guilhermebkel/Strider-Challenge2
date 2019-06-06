@@ -1,8 +1,8 @@
-create table task (
+CREATE TABLE task(
 	
-	id bitint auto_increment not null,
-	name varchar(20) not null,
-	description varchar(200) not null,
+	id INT AUTO_INCREMENT NOT NULL,
+	name VARCHAR(20) NOT NULL,
+	description VARCHAR(200) NOT NULL,
 
-	primary key (id)
+	PRIMARY KEY (id)
 );
