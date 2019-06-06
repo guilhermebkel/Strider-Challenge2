@@ -14,14 +14,10 @@ public class Task {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	@NotEmpty
-	@Size(max = 50)
+
 	@Column
 	private String name;
 
-	@NotEmpty
-	@Size(max = 200)
 	@Column
 	private String description;
 	

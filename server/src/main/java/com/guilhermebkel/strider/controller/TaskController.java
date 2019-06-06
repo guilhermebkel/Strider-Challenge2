@@ -51,7 +51,7 @@ public class TaskController {
 		// POST METHOD
 		@PostMapping
 		@ResponseStatus(HttpStatus.CREATED)
-		public Task addNewTask(@Valid @RequestBody Task task){
+		public Task addTask(@Valid @RequestBody Task task){
 			
 			Optional<Task> existentTask = tasks.
 					findByNameAndDescription(task.getName(), task.getDescription());
@@ -79,13 +79,14 @@ public class TaskController {
 					"There's no element with this ID!");
 
 		}
-		/*
+		
 		// UPDATE METHOD
-		@PutMapping("/{id}")
-		public Task updateTaskById(@RequestBody Task newTask, @PathVariable Long id){
+		@PutMapping
+		public Task updateTask(@RequestBody Task newTask){
 			
+			return tasks.save(newTask);
 			
-		}*/
+		}
 		
 		
 }
