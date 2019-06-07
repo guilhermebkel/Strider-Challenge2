@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import DeleteIcon from '../../resources/delete-icon.png'
 import './style.css';
 
+import apiRoutes from '../../routes/api';
+const api = new apiRoutes();
+
 class TaskList extends Component{
     constructor(props){
         super(props);
@@ -11,7 +14,7 @@ class TaskList extends Component{
     }
 
     deleteTask(id){
-
+        api.deleteTaskById(id);
     }
 
     render(){
@@ -20,8 +23,8 @@ class TaskList extends Component{
                 <div className="task-card">
                     <h1 className="task-title">{this.props.name}</h1>
                     <img className="delete-button" onClick={()=> {
-                        
-                    }} src={DeleteIcon} alt="delete-button"></img>
+                        this.deleteTask(this.props.id)}
+                        } src={DeleteIcon} alt="delete-button" />
                 </div>
             </div>
         );
