@@ -20,7 +20,7 @@ class TaskBar extends Component{
 
         const newTask = {
             "name": this.state.newTask,
-            "description": this.state.newTask
+            "description": "false"
         }
 
         new Promise((callback) => {

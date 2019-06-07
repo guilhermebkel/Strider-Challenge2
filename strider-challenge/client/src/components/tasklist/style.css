@@ -23,7 +23,7 @@
     color: #343A40;
 }
 .delete-button{
-    margin: auto 10px auto auto;
+    margin: auto 10px auto 0;
     width: 15px;
     height: 15px;
     padding: 10px;
@@ -35,6 +35,25 @@
     transition: all 0.25s ease;
 }
 .delete-button:hover{
+    opacity: 1;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+.complete-button{
+    margin: auto 0 auto auto;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    cursor: pointer;
+    opacity: 0.5;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+.complete-button:hover{
     opacity: 1;
     -webkit-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;

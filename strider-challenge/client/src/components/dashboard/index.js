@@ -3,6 +3,9 @@ import TaskList from '../tasklist/index';
 import './style.css';
 import './responsive.css';
 
+import apiRoutes from '../../routes/api';
+const api = new apiRoutes();
+
 class Dashboard extends Component{
     constructor(props){
         super(props);
@@ -13,7 +16,19 @@ class Dashboard extends Component{
 
     componentWillReceiveProps(){
         this.setState({
-            tasks: this.props.tasks
+            tasks: this.props.tasks,
+        })
+    }
+
+    componentDidUpdate(){
+        new Promise((callback) => {
+          
+          api.getAllTasksFromDatabase(callback);
+    
+        }).then((tasks) => {
+          this.setState({
+            tasks: tasks
+          })
         })
     }
 

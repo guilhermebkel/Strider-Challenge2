@@ -26,18 +26,6 @@ class App extends React.Component{
     })
   }
 
-  componentDidUpdate(){
-    new Promise((callback) => {
-      
-      api.getAllTasksFromDatabase(callback);
-
-    }).then((tasks) => {
-      this.setState({
-        tasks: tasks
-      })
-    })
-  }
-
   render(){
     return (
       <React.Fragment>
