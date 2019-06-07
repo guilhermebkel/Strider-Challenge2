@@ -1,8 +1,11 @@
 import React from 'react';
-import Navbar from './components/navbar'
+import Navbar from './components/navbar';
+import TaskBar from './components/taskbar';
+import Dashboard from './components/dashboard';
 
 import apiRoutes from './routes/api';
 const api = new apiRoutes();
+
 //const get = api.getAllTasksFromDatabase();
 //const getById = api.getTaskById(10);
 //const deleteById = api.deleteTaskById(10);
@@ -18,10 +21,48 @@ const existingTask = {
 }
 const updateTask =  api.updateTask(existingTask);*/
 
-function App() {
-  return (
-    <Navbar />
-  );
+class App extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      tasks: []
+    }
+  }
+
+  componentDidMount(){
+    new Promise((callback) => {
+      
+      api.getAllTasksFromDatabase(callback);
+
+    }).then((tasks) => {
+      this.setState({
+        tasks: tasks
+      })
+    })
+  }
+
+  componentDidUpdate(){
+    new Promise((callback) => {
+      
+      api.getAllTasksFromDatabase(callback);
+
+    }).then((tasks) => {
+      this.setState({
+        tasks: tasks
+      })
+    })
+  }
+
+  render(){
+    return (
+      <React.Fragment>
+        <Navbar />
+        <TaskBar />
+        <Dashboard tasks={this.state.tasks}/>
+      </React.Fragment>
+    );
+  }
+
 }
 
 export default App;

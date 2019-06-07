@@ -29,7 +29,7 @@ module.exports = function(){
         .then(response => console.log(response))
     }
 
-    this.addTask = (newTask) => {
+    this.addTask = (newTask, callback) => {
         fetch(APILink, {
             method: 'POST',
             headers: {
@@ -37,7 +37,10 @@ module.exports = function(){
             },
             body: JSON.stringify(newTask)
         })
-        .then(response => console.log(response))
+        .then(response => {
+            console.log(response);
+            callback();
+        })
     }
 
     this.updateTask = (existingTask) => {

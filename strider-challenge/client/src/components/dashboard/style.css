@@ -1,0 +1,79 @@
+.container{
+    display: flex;
+    width: 100vw;
+}
+.selector{
+    display: flex;
+    width: 90vw;
+    margin: auto auto;
+    height: auto;
+    box-shadow: 0 5px 8px rgba(82, 82, 82, 0.2);
+    margin-bottom: 15px;
+}
+.selector-title{
+    font-size: 16px;
+    margin: auto auto;
+    padding: 5px 8vw;
+    cursor: pointer;
+    font-weight: lighter;
+}
+.left{
+    display: flex;
+    margin: auto 0 auto auto;
+    background-color: #0e442b;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding-left: 5px;
+    width: 33%;
+    color: lightgrey;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+.left:hover{
+    background-color: #072416;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+.center{
+    display: flex;
+    margin: auto 0 auto 0;
+    background-color: #0e442b;
+    width: 33%;
+    color: lightgrey;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+.center:hover{
+    background-color: #072416;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+.right{
+    display: flex;
+    margin: auto auto auto 0;
+    background-color: #0e442b;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding-right: 5px;
+    width: 33%;
+    color: lightgrey;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+.right:hover{
+    background-color: #072416;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
