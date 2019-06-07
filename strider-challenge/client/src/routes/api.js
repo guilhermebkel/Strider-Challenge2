@@ -22,13 +22,12 @@ module.exports = function(){
         });
     }
 
-    this.deleteTaskById = (id, callback) => {
+    this.deleteTaskById = (id) => {
         fetch(APILink + id, {
             method: 'DELETE'
         })
         .then(response => {
             console.log(response)
-            callback();
         });
     }
 
@@ -40,13 +39,13 @@ module.exports = function(){
             },
             body: JSON.stringify(newTask)
         })
-        .then(response => {
-            console.log(response);
-            callback();
-        })
+        .then(response => response.json())
+        .then(newTask => {
+            callback(newTask);
+        });
     }
 
-    this.updateTask = (existingTask, callback) => {
+    this.updateTask = (existingTask) => {
         fetch(APILink, {
             method: 'PUT',
             headers: {
@@ -56,7 +55,6 @@ module.exports = function(){
         })
         .then(response => {
             console.log(response);
-            callback();
         })
     }
 

@@ -25,7 +25,7 @@
     border-bottom-left-radius: 3px;
     padding-left: 5px;
     width: 33%;
-    color: lightgrey;
+    color: lightcyan;
     -webkit-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
@@ -43,7 +43,7 @@
     margin: auto 0 auto 0;
     background-color: #0e442b;
     width: 33%;
-    color: lightgrey;
+    color: lightcyan;
     -webkit-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
@@ -64,7 +64,7 @@
     border-bottom-right-radius: 3px;
     padding-right: 5px;
     width: 33%;
-    color: lightgrey;
+    color: lightcyan;
     -webkit-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
