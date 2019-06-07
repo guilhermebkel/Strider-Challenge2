@@ -32,6 +32,9 @@ module.exports = function(){
     this.addTask = (newTask) => {
         fetch(APILink, {
             method: 'POST',
+            headers: {
+                'Content-Type':'application/json'
+            },
             body: JSON.stringify(newTask)
         })
         .then(response => console.log(response))
@@ -40,6 +43,9 @@ module.exports = function(){
     this.updateTask = (existingTask) => {
         fetch(APILink, {
             method: 'PUT',
+            headers: {
+                'Content-Type':'application/json'
+            },
             body: JSON.stringify(existingTask)
         })
         .then(response => console.log(response))
