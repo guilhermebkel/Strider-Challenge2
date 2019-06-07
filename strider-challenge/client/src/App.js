@@ -1,6 +1,8 @@
 import React from 'react';
-import API from './routes/api';
-const api = new API();
+import Navbar from './components/navbar'
+
+import apiRoutes from './routes/api';
+const api = new apiRoutes();
 //const get = api.getAllTasksFromDatabase();
 //const getById = api.getTaskById(10);
 //const deleteById = api.deleteTaskById(10);
@@ -18,9 +20,7 @@ const updateTask =  api.updateTask(existingTask);*/
 
 function App() {
   return (
-    <div>
-      
-    </div>
+    <Navbar />
   );
 }
 
