@@ -45,7 +45,7 @@ class TaskList extends Component{
     }
 
     completeTask(oldTask){
-        
+
         const updatedTask = {
             id: oldTask.id,
             name: oldTask.name,

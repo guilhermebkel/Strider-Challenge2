@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Strider-Challenge2/static/css/main.08b35c23.chunk.css",
-    "main.js": "/Strider-Challenge2/static/js/main.d297b204.chunk.js",
-    "main.js.map": "/Strider-Challenge2/static/js/main.d297b204.chunk.js.map",
+    "main.css": "/Strider-Challenge2/static/css/main.96dc75f5.chunk.css",
+    "main.js": "/Strider-Challenge2/static/js/main.5fa74c9f.chunk.js",
+    "main.js.map": "/Strider-Challenge2/static/js/main.5fa74c9f.chunk.js.map",
     "runtime~main.js": "/Strider-Challenge2/static/js/runtime~main.4dc34b16.js",
     "runtime~main.js.map": "/Strider-Challenge2/static/js/runtime~main.4dc34b16.js.map",
-    "static/js/2.920c6ee8.chunk.js": "/Strider-Challenge2/static/js/2.920c6ee8.chunk.js",
-    "static/js/2.920c6ee8.chunk.js.map": "/Strider-Challenge2/static/js/2.920c6ee8.chunk.js.map",
+    "static/js/2.1e353f17.chunk.js": "/Strider-Challenge2/static/js/2.1e353f17.chunk.js",
+    "static/js/2.1e353f17.chunk.js.map": "/Strider-Challenge2/static/js/2.1e353f17.chunk.js.map",
     "index.html": "/Strider-Challenge2/index.html",
-    "precache-manifest.c98b186047103fdfa8eb3e02a115cb91.js": "/Strider-Challenge2/precache-manifest.c98b186047103fdfa8eb3e02a115cb91.js",
+    "precache-manifest.b6f4915650672a6076a546de1b3a16ba.js": "/Strider-Challenge2/precache-manifest.b6f4915650672a6076a546de1b3a16ba.js",
     "service-worker.js": "/Strider-Challenge2/service-worker.js",
-    "static/css/main.08b35c23.chunk.css.map": "/Strider-Challenge2/static/css/main.08b35c23.chunk.css.map",
+    "static/css/main.96dc75f5.chunk.css.map": "/Strider-Challenge2/static/css/main.96dc75f5.chunk.css.map",
     "static/media/logo.svg": "/Strider-Challenge2/static/media/logo.19740d60.svg",
     "static/media/reset-icon.png": "/Strider-Challenge2/static/media/reset-icon.6859dc74.png"
   }

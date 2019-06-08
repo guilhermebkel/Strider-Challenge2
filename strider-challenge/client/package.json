@@ -5,6 +5,7 @@
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
+    "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.8.6",
     "react-loading-overlay": "^1.0.1",
     "react-router-dom": "^5.0.1",

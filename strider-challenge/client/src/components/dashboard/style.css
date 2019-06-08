@@ -77,3 +77,34 @@
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
 }
+
+.todo-item {
+    width: auto;
+    height: auto;
+    background-color: red;
+    float: left;
+    border: solid 2px white;
+    box-sizing: border-box;
+  }
+  
+  .example-enter {
+    opacity: 0.01;
+    width: 0px;
+  }
+  
+  .example-enter.example-enter-active {
+    opacity: 1;
+    width: auto;
+    transition: 300ms;
+  }
+  
+  .example-leave {
+    opacity: 1;
+    width: auto;
+  }
+  
+  .example-leave.example-leave-active {
+    opacity: 0.01;
+    width: auto;
+    transition: 700ms;
+  }
