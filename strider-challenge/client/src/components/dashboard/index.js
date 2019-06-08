@@ -16,6 +16,7 @@ class Dashboard extends Component{
         this.handleSelector(this.state.selector);
     }
 
+    // Changes the method for sorting out the tasks
     handleSelector(selector){
         this.setState({
             selector: selector
@@ -50,6 +51,7 @@ class Dashboard extends Component{
     render(){
         return(
             <React.Fragment>
+
                 <div className="container">
                     <div className="selector">
                         <div className="left" onClick={() => {this.handleSelector("Todos")}}>
@@ -63,29 +65,13 @@ class Dashboard extends Component{
                         </div>
                     </div>
                 </div>   
-                {
-                    this.state.selector === "Todos"
-                    ?<div>
-                        {console.log(this.state.selector)}
-                        {this.props.tasks.slice(0).reverse().map(tasks => (
-                            <TaskList {...tasks} />
-                        ))}
-                    </div>
 
-                    :this.state.selector === "Pendentes"
-                    ?<div>
-                        {this.props.incompleteTasks.slice(0).reverse().map(tasks => (
-                            <TaskList {...tasks} />
-                        ))}
-                    </div>
+                <div>
+                    {this.props.tasks.slice(0).reverse().map(tasks => (
+                            <TaskList {...tasks} selector={this.state.selector} />
+                    ))}
+                </div>
 
-                    :<div>
-                        {console.log(this.props.completedTasks)}
-                        {this.props.completedTasks.slice(0).reverse().map(tasks => (
-                            <TaskList {...tasks} />
-                        ))}
-                    </div>
-                }
             </React.Fragment>
         );
     }

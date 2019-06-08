@@ -11,35 +11,15 @@ class TaskBar extends Component{
         this.state = {
             newTask: "",
             isActive: {},
-            tasks: [],
-            incompleteTasks: [],
-            completedTasks: []
+            tasks: []
         }
         this.handleNewTask = this.handleNewTask.bind(this);
         this.handleKeyPress = this.handleKeyPress.bind(this);
         this.addNewTask = this.addNewTask.bind(this)
     }
 
-    sortTasks(tasks){
-        const incompleteTasks = [];
-        const completedTasks = [];
-
-        for(let i=0; i<tasks.length; i++){
-            if(tasks[i].description === "false"){
-                incompleteTasks.push(tasks[i]);
-            }
-            else if(tasks[i].description === "true"){
-                completedTasks.push(tasks[i]);
-            }
-        }
-
-        this.setState({
-            incompleteTasks: incompleteTasks,
-            completedTasks: completedTasks
-        }) 
-
-    }
-
+    // Since app starts, it send a request to database
+    // in order to retrieve data.
     componentDidMount(){
         new Promise((callback) => {
           
@@ -49,7 +29,6 @@ class TaskBar extends Component{
           this.setState({
             tasks: tasks
           })
-          this.sortTasks(this.state.tasks);
         })
     }
 
@@ -69,11 +48,10 @@ class TaskBar extends Component{
             api.addTask(newTask, callback);
         }).then((newTask) => {
             this.setState({
-                tasks: [...this.state.tasks, newTask],
+                tasks: [newTask, ...this.state.tasks],
                 newTask: "",
                 isActive: {}
             })
-            this.sortTasks(this.state.tasks);
         })
     }
 
@@ -96,6 +74,7 @@ class TaskBar extends Component{
     render(){
         return(
             <React.Fragment>
+
                 <div className="search-bar">
                     <div className="search-bar-container">
                         <input style={this.state.isActive} value={this.state.newTask} 
@@ -106,8 +85,8 @@ class TaskBar extends Component{
                     </div>
                 </div>
 
-                <Dashboard tasks={this.state.tasks} incompleteTasks={this.state.incompleteTasks} 
-                completedTasks={this.state.completedTasks} />
+                <Dashboard tasks={this.state.tasks} />
+                
             </React.Fragment>
         );
     }
