@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Dashboard from '../dashboard/index';
 import './style.css'
 
+// REST API
 import apiRoutes from '../../routes/api';
 const api = new apiRoutes();
 
@@ -61,7 +62,6 @@ class TaskBar extends Component{
         })
     }
 
-    // Makes a request to add new task to database
     addNewTask(){
 
         const newTask = {
@@ -85,6 +85,8 @@ class TaskBar extends Component{
             loading: {animation: "loading 1s infinite", pointerEvents: "none"}
         })
 
+        // Sends a request to add the new task
+        // on database.
         new Promise((callback) => {
             api.addTask(newTask, callback);
         }).then((newTask) => {
@@ -98,7 +100,7 @@ class TaskBar extends Component{
     }
 
     // Automatically updates current state
-    // with new data typed by user
+    // with new data typed by user.
     handleNewTask(event){
         this.setState({
             newTask: event.target.value
@@ -115,21 +117,17 @@ class TaskBar extends Component{
 
     render(){
         return(
-            <React.Fragment>
-
-                <div className="search-bar">
-                    <div className="search-bar-container">
-                        <input style={this.state.loading} value={this.state.newTask} 
-                        placeholder={this.state.placeholder} onChange={this.handleNewTask} 
-                        onKeyPress={this.handleKeyPress}>
-                        </input>
-                        <div className="button" onClick={this.addNewTask}><h1>Adicionar</h1></div>
+            <>
+                <container>
+                    <div className="search-bar" style={this.state.loading}>
+                        <input value={this.state.newTask} placeholder={this.state.placeholder} 
+                        onChange={this.handleNewTask} onKeyPress={this.handleKeyPress} />
+                        <button onClick={this.addNewTask}><h1>Adicionar</h1></button>
                     </div>
-                </div>
+                </container>
 
-                <Dashboard tasks={this.state.tasks} />
-                
-            </React.Fragment>
+                <Dashboard tasks={this.state.tasks} />  
+            </>
         );
     }
 }

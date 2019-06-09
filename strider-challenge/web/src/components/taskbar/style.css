@@ -1,4 +1,5 @@
-.search-bar{
+/* Search bar container styles */
+container{
     width: 100vw; 
     margin: 20px 0;
     height: 30px;
@@ -6,42 +7,47 @@
     grid-template-columns: 90vw auto;
     display: flex;
 }
-.search-bar-container{
+.search-bar{
     width: 90vw; 
     display: flex;
     margin: auto auto;
+    box-shadow: 0 5px 8px rgba(82, 82, 82, 0.4);
+    border-radius: 3px;
 }
-.search-bar-container input{
+@keyframes loading {
+    0% { box-shadow: 0 5px 8px rgba(82, 145, 63, 0.4) }
+    10% { box-shadow: 0 5px 8px rgba(82, 82, 82, 0.5) }
+    20% { box-shadow: 0 5px 8px rgba(82, 82, 82, 0.6) }
+    30% { box-shadow: 0 5px 8px rgba(82, 82, 82, 0.7) }
+    40% { box-shadow: 0 5px 8px rgba(82, 82, 82, 0.8) }
+    50% { box-shadow: 0 5px 8px rgba(82, 82, 82, 0.9) }
+    60% { box-shadow: 0 5px 8px rgba(82, 82, 82, 0.9) }
+    30% { box-shadow: 0 5px 8px rgba(82, 82, 82, 0.8) }
+    70% { box-shadow: 0 5px 8px rgba(82, 82, 82, 0.7) }
+    80% { box-shadow: 0 5px 8px rgba(82, 82, 82, 0.6) }
+    90% { box-shadow: 0 5px 8px rgba(82, 82, 82, 0.5) }
+    100% { box-shadow: 0 5px 8px rgba(82, 82, 82, 0.4) }
+}
+
+/* Input Style */
+input{
     margin: auto 0 auto auto; 
     width: 90vw;
     height: 30px;
     padding-left: 30px;
+    padding-right: 10px;
     border-width: 0px;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
-    box-shadow: 0 5px 8px rgba(82, 82, 82, 0.2);
+    
 }
 input:focus{
     outline: none;
 }
 
-@keyframes loading {
-    0% { box-shadow: 0 5px 8px rgba(82, 145, 63, 0.2) }
-    10% { box-shadow: 0 5px 8px rgba(82, 82, 82, 0.3) }
-    20% { box-shadow: 0 5px 8px rgba(82, 82, 82, 0.4) }
-    30% { box-shadow: 0 5px 8px rgba(82, 82, 82, 0.5) }
-    40% { box-shadow: 0 5px 8px rgba(82, 82, 82, 0.6) }
-    50% { box-shadow: 0 5px 8px rgba(82, 82, 82, 0.7) }
-    60% { box-shadow: 0 5px 8px rgba(82, 82, 82, 0.7) }
-    30% { box-shadow: 0 5px 8px rgba(82, 82, 82, 0.6) }
-    70% { box-shadow: 0 5px 8px rgba(82, 82, 82, 0.5) }
-    80% { box-shadow: 0 5px 8px rgba(82, 82, 82, 0.4) }
-    90% { box-shadow: 0 5px 8px rgba(82, 82, 82, 0.3) }
-    100% { box-shadow: 0 5px 8px rgba(82, 82, 82, 0.2) }
-}
-
-.button{
-    height: 30px;
+/* Button Styles */
+button{
+    height: 32px;
     margin: auto auto auto 0;
     width: 90px;
     display: flex;
@@ -51,20 +57,13 @@ input:focus{
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     color: #8ee918;
-    box-shadow: 0 5px 8px rgba(82, 82, 82, 0.4);
     -webkit-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
     cursor: pointer;
 }
-.button h1{
-    font-weight: bold;
-    font-size: 12px;
-    margin: auto auto;
-    padding: auto auto;
-}
-.button:hover{
+button:hover{
     background-color: #66ac0c;
     border-color: #66ac0c;
     color: white;
@@ -73,5 +72,9 @@ input:focus{
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
 }
-
-/*#75bf11*/
+button h1{
+    font-weight: bold;
+    font-size: 12px;
+    margin: auto auto;
+    padding: auto auto;
+}

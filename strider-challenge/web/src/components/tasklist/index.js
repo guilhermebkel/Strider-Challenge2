@@ -13,7 +13,7 @@ class TaskList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            id: "",
+            isDeleted: false,
             name: this.props.name,
             active: this.props.active,
             image: this.props.image
@@ -25,10 +25,12 @@ class TaskList extends Component {
         api.deleteTaskById(id);
 
         this.setState({
-            id: id
+            isDeleted: true
         })
     }
 
+    // Turns task state to
+    // incomplete.
     resetTask(oldTask) {
 
         const updatedTask = {
@@ -46,6 +48,8 @@ class TaskList extends Component {
 
     }
 
+    // Turns task state to
+    // complete.
     completeTask(oldTask) {
 
         const updatedTask = {
@@ -69,26 +73,26 @@ class TaskList extends Component {
                 {
                     this.props.selector === "Todos"
                         ?
-                        this.state.id === ""
+                        this.state.isDeleted === false
                             ?
                             <div className="task-card">
                                 {
                                     this.state.active === "true"
                                         ?
-                                        <React.Fragment>
+                                        <>
                                             <h1 className="task-title" style={{ textDecoration: "line-through" }}>{this.state.name}</h1>
                                             <img className="state-button" onClick={() => {
                                                 this.resetTask(this.props)
                                             }} src={ResetIcon} alt="state-button" />
-                                        </React.Fragment>
+                                        </>
 
                                         :
-                                        <React.Fragment>
+                                        <>
                                             <h1 className="task-title">{this.state.name}</h1>
                                             <img className="state-button" onClick={() => {
                                                 this.completeTask(this.props)
                                             }} src={CompleteIcon} alt="state-button" />
-                                        </React.Fragment>
+                                        </>
                                 }
                                 <img className="delete-button" onClick={() => {
                                     this.deleteTask(this.props.id)
@@ -103,28 +107,28 @@ class TaskList extends Component {
 
                 {
                     this.props.selector === "Pendentes" && this.state.active === "false"
-                    ?
-                        this.state.id === ""
+                        ?
+                        this.state.isDeleted === false
                             ?
                             <div className="task-card">
                                 {
                                     this.state.active === "true"
                                         ?
-                                        <React.Fragment>
+                                        <>
                                             <h1 className="task-title" style={{ textDecoration: "line-through" }}>{this.state.name}</h1>
                                             <img className="state-button" onClick={() => {
                                                 this.resetTask(this.props)
                                             }} src={ResetIcon} alt="state-button" />
-                                        </React.Fragment>
+                                        </>
 
                                         :
-                                        <React.Fragment>
+                                        <>
                                             <h1 className="task-title">{this.state.name}</h1>
                                             <img className="state-button" onClick={() => {
                                                 this.completeTask(this.props)
                                             }
                                             } src={CompleteIcon} alt="state-button" />
-                                        </React.Fragment>
+                                        </>
                                 }
                                 <img className="delete-button" onClick={() => {
                                     this.deleteTask(this.props.id)
@@ -139,28 +143,28 @@ class TaskList extends Component {
 
                 {
                     this.props.selector === "Feitos" && this.state.active === "true"
-                    ?
-                        this.state.id === ""
+                        ?
+                        this.state.isDeleted === false
                             ?
                             <div className="task-card">
                                 {
                                     this.state.active === "true"
                                         ?
-                                        <React.Fragment>
+                                        <>
                                             <h1 className="task-title" style={{ textDecoration: "line-through" }}>{this.state.name}</h1>
                                             <img className="state-button" onClick={() => {
                                                 this.resetTask(this.props)
                                             }} src={ResetIcon} alt="state-button" />
-                                        </React.Fragment>
+                                        </>
 
                                         :
-                                        <React.Fragment>
+                                        <>
                                             <h1 className="task-title">{this.state.name}</h1>
                                             <img className="state-button" onClick={() => {
                                                 this.completeTask(this.props)
                                             }
                                             } src={CompleteIcon} alt="state-button" />
-                                        </React.Fragment>
+                                        </>
                                 }
                                 <img className="delete-button" onClick={() => {
                                     this.deleteTask(this.props.id)

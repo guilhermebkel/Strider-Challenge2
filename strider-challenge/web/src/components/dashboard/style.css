@@ -1,6 +1,13 @@
-.container{
+container{
     display: flex;
     width: 100vw;
+}
+.title{
+    font-size: 16px;
+    margin: auto auto;
+    padding: 5px 8vw;
+    cursor: pointer;
+    font-weight: lighter;
 }
 .selector{
     display: flex;
@@ -11,14 +18,7 @@
     margin-bottom: 15px;
     cursor: pointer;
 }
-.selector-title{
-    font-size: 16px;
-    margin: auto auto;
-    padding: 5px 8vw;
-    cursor: pointer;
-    font-weight: lighter;
-}
-.left{
+.selector-left{
     display: flex;
     margin: auto 0 auto auto;
     background-color: #0e442b;
@@ -32,14 +32,14 @@
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
 }
-.left:hover{
+.selector-left:hover{
     background-color: #072416;
     -webkit-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
 }
-.center{
+.selector-center{
     display: flex;
     margin: auto 0 auto 0;
     background-color: #0e442b;
@@ -50,14 +50,14 @@
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
 }
-.center:hover{
+.selector-center:hover{
     background-color: #072416;
     -webkit-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
 }
-.right{
+.selector-right{
     display: flex;
     margin: auto auto auto 0;
     background-color: #0e442b;
@@ -71,41 +71,10 @@
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
 }
-.right:hover{
+.selector-right:hover{
     background-color: #072416;
     -webkit-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
 }
-
-.todo-item {
-    width: auto;
-    height: auto;
-    background-color: red;
-    float: left;
-    border: solid 2px white;
-    box-sizing: border-box;
-  }
-  
-  .example-enter {
-    opacity: 0.01;
-    width: 0px;
-  }
-  
-  .example-enter.example-enter-active {
-    opacity: 1;
-    width: auto;
-    transition: 300ms;
-  }
-  
-  .example-leave {
-    opacity: 1;
-    width: auto;
-  }
-  
-  .example-leave.example-leave-active {
-    opacity: 0.01;
-    width: auto;
-    transition: 700ms;
-  }

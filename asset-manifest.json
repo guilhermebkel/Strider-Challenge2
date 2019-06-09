@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Strider-Challenge2/static/css/main.d0704703.chunk.css",
-    "main.js": "/Strider-Challenge2/static/js/main.babec4b8.chunk.js",
-    "main.js.map": "/Strider-Challenge2/static/js/main.babec4b8.chunk.js.map",
+    "main.css": "/Strider-Challenge2/static/css/main.f5f697d1.chunk.css",
+    "main.js": "/Strider-Challenge2/static/js/main.56b2818c.chunk.js",
+    "main.js.map": "/Strider-Challenge2/static/js/main.56b2818c.chunk.js.map",
     "runtime~main.js": "/Strider-Challenge2/static/js/runtime~main.4dc34b16.js",
     "runtime~main.js.map": "/Strider-Challenge2/static/js/runtime~main.4dc34b16.js.map",
     "static/js/2.28ea9fc2.chunk.js": "/Strider-Challenge2/static/js/2.28ea9fc2.chunk.js",
     "static/js/2.28ea9fc2.chunk.js.map": "/Strider-Challenge2/static/js/2.28ea9fc2.chunk.js.map",
     "index.html": "/Strider-Challenge2/index.html",
-    "precache-manifest.5b7abd04682e8b36c8b192c96460ed19.js": "/Strider-Challenge2/precache-manifest.5b7abd04682e8b36c8b192c96460ed19.js",
+    "precache-manifest.cc56077f2af6d746e6ddd2f206bc8834.js": "/Strider-Challenge2/precache-manifest.cc56077f2af6d746e6ddd2f206bc8834.js",
     "service-worker.js": "/Strider-Challenge2/service-worker.js",
-    "static/css/main.d0704703.chunk.css.map": "/Strider-Challenge2/static/css/main.d0704703.chunk.css.map",
+    "static/css/main.f5f697d1.chunk.css.map": "/Strider-Challenge2/static/css/main.f5f697d1.chunk.css.map",
     "static/media/logo.svg": "/Strider-Challenge2/static/media/logo.19740d60.svg",
     "static/media/reset-icon.png": "/Strider-Challenge2/static/media/reset-icon.6859dc74.png"
   }

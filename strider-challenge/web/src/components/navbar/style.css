@@ -1,10 +1,10 @@
-.navbar{
+navbar{
     height: 60px;
     width: 100vw;
     background-color: #1e693c;
     display: flex;
 }
-.navbar a{
+navbar a{
     margin: auto auto;
 }
 .logo{
