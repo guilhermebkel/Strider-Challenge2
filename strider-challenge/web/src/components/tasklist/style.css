@@ -43,9 +43,9 @@
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
 }
-.complete-button{
+.state-button{
     margin: auto 0 auto auto;
-    width: 20px;
+    width: auto;
     height: 20px;
     padding: 10px;
     cursor: pointer;
@@ -55,7 +55,7 @@
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
 }
-.complete-button:hover{
+.state-button:hover{
     opacity: 1;
     -webkit-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;

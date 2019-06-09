@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e9172210dc1fc5e5d1f923ce7ff29eb8",
+    "revision": "0bf9a77beef3c82a60935f03cdc5b1ce",
     "url": "/Strider-Challenge2/index.html"
   },
   {
-    "revision": "cc9ee9c223a555971b13",
-    "url": "/Strider-Challenge2/static/css/main.c3a87d32.chunk.css"
+    "revision": "1f7dc837fcf7e58dda21",
+    "url": "/Strider-Challenge2/static/css/main.d0704703.chunk.css"
   },
   {
-    "revision": "93c6110706872baee728",
-    "url": "/Strider-Challenge2/static/js/2.b85a9372.chunk.js"
+    "revision": "adff61f04da348455c2a",
+    "url": "/Strider-Challenge2/static/js/2.28ea9fc2.chunk.js"
   },
   {
-    "revision": "cc9ee9c223a555971b13",
-    "url": "/Strider-Challenge2/static/js/main.734f20fe.chunk.js"
+    "revision": "1f7dc837fcf7e58dda21",
+    "url": "/Strider-Challenge2/static/js/main.babec4b8.chunk.js"
   },
   {
     "revision": "e98e2ead399873cba317",

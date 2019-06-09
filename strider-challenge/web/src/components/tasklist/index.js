@@ -77,17 +77,17 @@ class TaskList extends Component {
                                         ?
                                         <React.Fragment>
                                             <h1 className="task-title" style={{ textDecoration: "line-through" }}>{this.state.name}</h1>
-                                            <img className="complete-button" onClick={() => {
+                                            <img className="state-button" onClick={() => {
                                                 this.resetTask(this.props)
-                                            }} src={ResetIcon} alt="complete-button" />
+                                            }} src={ResetIcon} alt="state-button" />
                                         </React.Fragment>
 
                                         :
                                         <React.Fragment>
                                             <h1 className="task-title">{this.state.name}</h1>
-                                            <img className="complete-button" onClick={() => {
+                                            <img className="state-button" onClick={() => {
                                                 this.completeTask(this.props)
-                                            }} src={CompleteIcon} alt="complete-button" />
+                                            }} src={CompleteIcon} alt="state-button" />
                                         </React.Fragment>
                                 }
                                 <img className="delete-button" onClick={() => {
@@ -112,18 +112,18 @@ class TaskList extends Component {
                                         ?
                                         <React.Fragment>
                                             <h1 className="task-title" style={{ textDecoration: "line-through" }}>{this.state.name}</h1>
-                                            <img className="complete-button" onClick={() => {
+                                            <img className="state-button" onClick={() => {
                                                 this.resetTask(this.props)
-                                            }} src={ResetIcon} alt="complete-button" />
+                                            }} src={ResetIcon} alt="state-button" />
                                         </React.Fragment>
 
                                         :
                                         <React.Fragment>
                                             <h1 className="task-title">{this.state.name}</h1>
-                                            <img className="complete-button" onClick={() => {
+                                            <img className="state-button" onClick={() => {
                                                 this.completeTask(this.props)
                                             }
-                                            } src={CompleteIcon} alt="complete-button" />
+                                            } src={CompleteIcon} alt="state-button" />
                                         </React.Fragment>
                                 }
                                 <img className="delete-button" onClick={() => {
@@ -148,18 +148,18 @@ class TaskList extends Component {
                                         ?
                                         <React.Fragment>
                                             <h1 className="task-title" style={{ textDecoration: "line-through" }}>{this.state.name}</h1>
-                                            <img className="complete-button" onClick={() => {
+                                            <img className="state-button" onClick={() => {
                                                 this.resetTask(this.props)
-                                            }} src={ResetIcon} alt="complete-button" />
+                                            }} src={ResetIcon} alt="state-button" />
                                         </React.Fragment>
 
                                         :
                                         <React.Fragment>
                                             <h1 className="task-title">{this.state.name}</h1>
-                                            <img className="complete-button" onClick={() => {
+                                            <img className="state-button" onClick={() => {
                                                 this.completeTask(this.props)
                                             }
-                                            } src={CompleteIcon} alt="complete-button" />
+                                            } src={CompleteIcon} alt="state-button" />
                                         </React.Fragment>
                                 }
                                 <img className="delete-button" onClick={() => {
