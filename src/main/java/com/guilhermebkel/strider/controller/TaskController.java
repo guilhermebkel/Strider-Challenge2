@@ -3,8 +3,6 @@ package com.guilhermebkel.strider.controller;
 import java.util.List;
 import java.util.Optional;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +14,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -25,7 +22,7 @@ import com.guilhermebkel.strider.repository.TaskRepository;
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
-@RequestMapping("/tasks")
+@RequestMapping
 public class TaskController {
 
 		@Autowired
@@ -51,18 +48,10 @@ public class TaskController {
 		
 		// POST METHOD
 		@PostMapping
-		@ResponseStatus(HttpStatus.CREATED)
-		public Task addTask(@Valid @RequestBody Task task){
-			
-			Optional<Task> existentTask = tasks.
-					findByNameAndDescription(task.getName(), task.getDescription());
-			
-			if(existentTask.isPresent()){
-				throw new ResponseStatusException(HttpStatus.BAD_REQUEST, 
-						"This task already exists!");
-			}
+		public Task addTask(@RequestBody Task task){
 			
 			return tasks.save(task);
+			
 		}
 		
 		// DELETE METHOD
