@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Strider-Challenge2/precache-manifest.82a3336a6adb94f34d83c710f8fa24c9.js"
+  "/Strider-Challenge2/precache-manifest.7be57741397a6f9763f0865835d649d9.js"
 );
 
 self.addEventListener('message', (event) => {

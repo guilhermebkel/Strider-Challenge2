@@ -18,7 +18,7 @@ class TaskBar extends Component{
         this.addNewTask = this.addNewTask.bind(this)
     }
 
-    // Since app starts, it send a request to database
+    // Since app starts, it sends a request to database
     // in order to retrieve data.
     componentDidMount(){
         new Promise((callback) => {
@@ -26,9 +26,27 @@ class TaskBar extends Component{
           api.getAllTasksFromDatabase(callback);
     
         }).then((tasks) => {
-          this.setState({
-            tasks: tasks
-          })
+          this.sortTasks(tasks);
+        })
+    }
+
+    sortTasks(tasks){
+        let sortedTasks = [];
+
+        for(let i=0; i<tasks.length; i++){
+            if(tasks[i].description === "true"){
+                sortedTasks.push(tasks[i]);
+            }
+        }
+
+        for(let i=0; i<tasks.length; i++){
+            if(tasks[i].description === "false"){
+                sortedTasks.push(tasks[i]);
+            }
+        }
+
+        this.setState({
+            tasks: sortedTasks
         })
     }
 

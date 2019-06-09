@@ -9,6 +9,7 @@
     height: auto;
     box-shadow: 0 5px 8px rgba(82, 82, 82, 0.2);
     margin-bottom: 15px;
+    cursor: pointer;
 }
 .selector-title{
     font-size: 16px;
