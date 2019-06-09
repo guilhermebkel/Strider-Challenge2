@@ -10,7 +10,7 @@ class TaskBar extends Component{
         super(props);
         this.state = {
             newTask: "",
-            isActive: {},
+            loading: {},
             tasks: []
         }
         this.handleNewTask = this.handleNewTask.bind(this);
@@ -21,6 +21,11 @@ class TaskBar extends Component{
     // Since app starts, it sends a request to database
     // in order to retrieve data.
     componentDidMount(){
+
+        this.setState({
+            loading: {animation: "loading 1s infinite", pointerEvents: "none"}
+        })
+
         new Promise((callback) => {
           
           api.getAllTasksFromDatabase(callback);
@@ -34,19 +39,20 @@ class TaskBar extends Component{
         let sortedTasks = [];
 
         for(let i=0; i<tasks.length; i++){
-            if(tasks[i].description === "true"){
+            if(tasks[i].active === "true"){
                 sortedTasks.push(tasks[i]);
             }
         }
 
         for(let i=0; i<tasks.length; i++){
-            if(tasks[i].description === "false"){
+            if(tasks[i].active === "false"){
                 sortedTasks.push(tasks[i]);
             }
         }
 
         this.setState({
-            tasks: sortedTasks
+            tasks: sortedTasks,
+            loading: {}
         })
     }
 
@@ -55,11 +61,12 @@ class TaskBar extends Component{
 
         const newTask = {
             "name": this.state.newTask,
-            "description": "false"
+            "active": "false",
+            "image": "null"
         }
 
         this.setState({
-            isActive: {animation: "loading 1s infinite", pointerEvents: "none"}
+            loading: {animation: "loading 1s infinite", pointerEvents: "none"}
         })
 
         new Promise((callback) => {
@@ -68,7 +75,7 @@ class TaskBar extends Component{
             this.setState({
                 tasks: [newTask, ...this.state.tasks],
                 newTask: "",
-                isActive: {}
+                loading: {}
             })
         })
     }
@@ -95,7 +102,7 @@ class TaskBar extends Component{
 
                 <div className="search-bar">
                     <div className="search-bar-container">
-                        <input style={this.state.isActive} value={this.state.newTask} 
+                        <input style={this.state.loading} value={this.state.newTask} 
                         placeholder="O que precisa ser feito?" onChange={this.handleNewTask} 
                         onKeyPress={this.handleKeyPress}>
                         </input>

@@ -15,7 +15,8 @@ class TaskList extends Component {
         this.state = {
             id: "",
             name: this.props.name,
-            description: this.props.description
+            active: this.props.active,
+            image: this.props.image
         }
     }
 
@@ -33,13 +34,14 @@ class TaskList extends Component {
         const updatedTask = {
             id: oldTask.id,
             name: oldTask.name,
-            description: "false"
+            active: "false",
+            image: oldTask.image
         }
 
         api.updateTask(updatedTask);
 
         this.setState({
-            description: "false"
+            active: "false"
         })
 
     }
@@ -49,13 +51,14 @@ class TaskList extends Component {
         const updatedTask = {
             id: oldTask.id,
             name: oldTask.name,
-            description: "true"
+            active: "true",
+            image: oldTask.image
         }
 
         api.updateTask(updatedTask);
 
         this.setState({
-            description: "true"
+            active: "true"
         })
 
     }
@@ -70,7 +73,7 @@ class TaskList extends Component {
                             ?
                             <div className="task-card">
                                 {
-                                    this.state.description === "true"
+                                    this.state.active === "true"
                                         ?
                                         <React.Fragment>
                                             <h1 className="task-title" style={{ textDecoration: "line-through" }}>{this.state.name}</h1>
@@ -99,13 +102,13 @@ class TaskList extends Component {
                 }
 
                 {
-                    this.props.selector === "Pendentes" && this.state.description === "false"
+                    this.props.selector === "Pendentes" && this.state.active === "false"
                     ?
                         this.state.id === ""
                             ?
                             <div className="task-card">
                                 {
-                                    this.state.description === "true"
+                                    this.state.active === "true"
                                         ?
                                         <React.Fragment>
                                             <h1 className="task-title" style={{ textDecoration: "line-through" }}>{this.state.name}</h1>
@@ -135,13 +138,13 @@ class TaskList extends Component {
                 }
 
                 {
-                    this.props.selector === "Feitos" && this.state.description === "true"
+                    this.props.selector === "Feitos" && this.state.active === "true"
                     ?
                         this.state.id === ""
                             ?
                             <div className="task-card">
                                 {
-                                    this.state.description === "true"
+                                    this.state.active === "true"
                                         ?
                                         <React.Fragment>
                                             <h1 className="task-title" style={{ textDecoration: "line-through" }}>{this.state.name}</h1>

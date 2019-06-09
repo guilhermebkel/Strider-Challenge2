@@ -1,4 +1,4 @@
-const APILink = 'https://strider-server.herokuapp.com/tasks/';
+const APILink = 'https://strider-server.herokuapp.com/';
 
 module.exports = function(){
 
