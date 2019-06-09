@@ -17,7 +17,7 @@ class Dashboard extends Component{
     // Changes the sorting method by swiping
     // the screen on mobile devices.
     onSwipeMove(position) {
-        if(position.x < 0){
+        if(position.x < -100){
             switch(this.state.selector){
                 case "Todos": 
                     this.handleSelector("Pendentes");
@@ -35,7 +35,7 @@ class Dashboard extends Component{
                     break;
             }
         }
-        if(position.x > 0){
+        if(position.x > 100){
             switch(this.state.selector){
                 case "Todos": 
                     this.handleSelector("Feitos");
