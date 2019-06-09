@@ -3,7 +3,10 @@
         font-size: 14px;
         margin: auto auto;
         padding: 5px;
-        cursor: pointer;
         font-weight: lighter;
+        cursor: initial;
+    }
+    .selector{
+        cursor: initial;
     }
 }

@@ -7,6 +7,7 @@
     "react": "^16.8.6",
     "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.8.6",
+    "react-easy-swipe": "0.0.17",
     "react-loading-overlay": "^1.0.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1"

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Swipe from 'react-easy-swipe';
 import TaskList from '../tasklist/index';
 import './style.css';
 import './responsive.css';
@@ -10,6 +11,48 @@ class Dashboard extends Component{
             selector: "Todos"
         }
         this.handleSelector = this.handleSelector.bind(this);
+        this.onSwipeMove = this.onSwipeMove.bind(this);
+    }
+ 
+    // Changes the sorting method by swiping
+    // the screen on mobile devices.
+    onSwipeMove(position) {
+        if(position.x < 0){
+            switch(this.state.selector){
+                case "Todos": 
+                    this.handleSelector("Pendentes");
+                    break;
+
+                case "Pendentes": 
+                    this.handleSelector("Feitos");
+                    break;
+                    
+                case "Feitos": 
+                    this.handleSelector("Todos");
+                    break;
+
+                default: 
+                    break;
+            }
+        }
+        if(position.x > 0){
+            switch(this.state.selector){
+                case "Todos": 
+                    this.handleSelector("Feitos");
+                    break;
+
+                case "Feitos": 
+                    this.handleSelector("Pendentes");
+                    break;
+                    
+                case "Pendentes": 
+                    this.handleSelector("Todos");
+                    break;
+                
+                default: 
+                    break;
+            }
+        }
     }
 
     componentWillReceiveProps(){
@@ -50,8 +93,8 @@ class Dashboard extends Component{
 
     render(){
         return(
-            <React.Fragment>
-
+            <Swipe onSwipeMove={this.onSwipeMove}>
+        
                 <div className="container">
                     <div className="selector">
                         <div className="left" onClick={() => {this.handleSelector("Todos")}}>
@@ -72,7 +115,7 @@ class Dashboard extends Component{
                     ))}
                 </div>
 
-            </React.Fragment>
+            </Swipe>
         );
     }
 }
