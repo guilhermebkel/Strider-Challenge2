@@ -17,7 +17,7 @@ class TaskBar extends Component{
         }
         this.handleNewTask = this.handleNewTask.bind(this);
         this.handleKeyPress = this.handleKeyPress.bind(this);
-        this.addNewTask = this.addNewTask.bind(this)
+        this.addNewTask = this.addNewTask.bind(this);
     }
 
     // Since app starts, it sends a request to database

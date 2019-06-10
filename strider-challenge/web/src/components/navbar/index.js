@@ -12,11 +12,11 @@ class Navbar extends Component{
 
     render(){
         return(
-            <navbar>
+            <div className="navbar">
                 <a href="https://strider.ag/" target="_blank" rel="noopener noreferrer">
                     <img className="logo" alt="strider-logo" src={StriderLogo} />
                 </a>
-            </navbar>
+            </div>
         );
     }
 }

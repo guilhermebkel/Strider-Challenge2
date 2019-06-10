@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-
-import DeleteIcon from '../../resources/delete-icon.png'
-import CompleteIcon from '../../resources/complete-icon.png'
-import ResetIcon from '../../resources/reset-icon.png'
+import TaskCard from '../taskcard/index';
 
 import './style.css';
 
+// REST API
 import apiRoutes from '../../routes/api';
 const api = new apiRoutes();
 
@@ -18,6 +16,10 @@ class TaskList extends Component {
             active: this.props.active,
             image: this.props.image
         }
+
+        this.deleteTask = this.deleteTask.bind(this);
+        this.resetTask = this.resetTask.bind(this);
+        this.completeTask = this.completeTask.bind(this);
     }
 
     deleteTask(id) {
@@ -45,7 +47,6 @@ class TaskList extends Component {
         this.setState({
             active: "false"
         })
-
     }
 
     // Turns task state to
@@ -64,7 +65,6 @@ class TaskList extends Component {
         this.setState({
             active: "true"
         })
-
     }
 
     render() {
@@ -75,29 +75,13 @@ class TaskList extends Component {
                         ?
                         this.state.isDeleted === false
                             ?
-                            <div className="task-card">
-                                {
-                                    this.state.active === "true"
-                                        ?
-                                        <>
-                                            <h1 className="task-title" style={{ textDecoration: "line-through" }}>{this.state.name}</h1>
-                                            <img className="state-button" onClick={() => {
-                                                this.resetTask(this.props)
-                                            }} src={ResetIcon} alt="state-button" />
-                                        </>
-
-                                        :
-                                        <>
-                                            <h1 className="task-title">{this.state.name}</h1>
-                                            <img className="state-button" onClick={() => {
-                                                this.completeTask(this.props)
-                                            }} src={CompleteIcon} alt="state-button" />
-                                        </>
-                                }
-                                <img className="delete-button" onClick={() => {
-                                    this.deleteTask(this.props.id)
-                                }} src={DeleteIcon} alt="delete-button" />
-                            </div>
+                            <TaskCard {...this.props}
+                                name={this.state.name}
+                                active={this.state.active}
+                                id={this.props.id}
+                                resetTask={this.resetTask}
+                                completeTask={this.completeTask}
+                                deleteTask={this.deleteTask} />
 
                             :
                             <div />
@@ -110,30 +94,13 @@ class TaskList extends Component {
                         ?
                         this.state.isDeleted === false
                             ?
-                            <div className="task-card">
-                                {
-                                    this.state.active === "true"
-                                        ?
-                                        <>
-                                            <h1 className="task-title" style={{ textDecoration: "line-through" }}>{this.state.name}</h1>
-                                            <img className="state-button" onClick={() => {
-                                                this.resetTask(this.props)
-                                            }} src={ResetIcon} alt="state-button" />
-                                        </>
-
-                                        :
-                                        <>
-                                            <h1 className="task-title">{this.state.name}</h1>
-                                            <img className="state-button" onClick={() => {
-                                                this.completeTask(this.props)
-                                            }
-                                            } src={CompleteIcon} alt="state-button" />
-                                        </>
-                                }
-                                <img className="delete-button" onClick={() => {
-                                    this.deleteTask(this.props.id)
-                                }} src={DeleteIcon} alt="delete-button" />
-                            </div>
+                            <TaskCard {...this.props}
+                                name={this.state.name}
+                                active={this.state.active}
+                                id={this.props.id}
+                                resetTask={this.resetTask}
+                                completeTask={this.completeTask}
+                                deleteTask={this.deleteTask} />
 
                             :
                             <div />
@@ -146,30 +113,13 @@ class TaskList extends Component {
                         ?
                         this.state.isDeleted === false
                             ?
-                            <div className="task-card">
-                                {
-                                    this.state.active === "true"
-                                        ?
-                                        <>
-                                            <h1 className="task-title" style={{ textDecoration: "line-through" }}>{this.state.name}</h1>
-                                            <img className="state-button" onClick={() => {
-                                                this.resetTask(this.props)
-                                            }} src={ResetIcon} alt="state-button" />
-                                        </>
-
-                                        :
-                                        <>
-                                            <h1 className="task-title">{this.state.name}</h1>
-                                            <img className="state-button" onClick={() => {
-                                                this.completeTask(this.props)
-                                            }
-                                            } src={CompleteIcon} alt="state-button" />
-                                        </>
-                                }
-                                <img className="delete-button" onClick={() => {
-                                    this.deleteTask(this.props.id)
-                                }} src={DeleteIcon} alt="delete-button" />
-                            </div>
+                            <TaskCard {...this.props}
+                                name={this.state.name}
+                                active={this.state.active}
+                                id={this.props.id}
+                                resetTask={this.resetTask}
+                                completeTask={this.completeTask}
+                                deleteTask={this.deleteTask} />
 
                             :
                             <div />

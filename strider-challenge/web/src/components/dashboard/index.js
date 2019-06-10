@@ -52,7 +52,7 @@ class Dashboard extends Component {
     render() {
         return (
             <>
-                <container>
+                <div className="container">
                     <div className="selector">
                         <div className="selector-left" onClick={() => { this.handleSelector("Todos") }}>
                             <h1 className="title">Todos</h1>
@@ -64,7 +64,7 @@ class Dashboard extends Component {
                             <h1 className="title">Feitos</h1>
                         </div>
                     </div>
-                </container>
+                </div>
 
                 {this.props.tasks.slice(0).reverse().map(tasks => (
                     <TaskList {...tasks} selector={this.state.selector} />
