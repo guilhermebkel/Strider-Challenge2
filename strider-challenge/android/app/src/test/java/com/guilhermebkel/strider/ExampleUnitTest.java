@@ -1,4 +1,4 @@
-package com.guilhermebkel.strider_task;
+package com.guilhermebkel.strider;
 
 import org.junit.Test;
 

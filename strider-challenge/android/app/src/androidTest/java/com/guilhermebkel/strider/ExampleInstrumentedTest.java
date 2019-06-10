@@ -1,4 +1,4 @@
-package com.guilhermebkel.strider_task;
+package com.guilhermebkel.strider;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.guilhermebkel.strider_task", appContext.getPackageName());
+        assertEquals("com.guilhermebkel.strider", appContext.getPackageName());
     }
 }
